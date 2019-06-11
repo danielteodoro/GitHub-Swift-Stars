@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7C5D641F22AD8C0600CA9C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */; };
-		7C5D642122AD8C0600CA9C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D642022AD8C0600CA9C12 /* ViewController.swift */; };
 		7C5D642422AD8C0600CA9C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642222AD8C0600CA9C12 /* Main.storyboard */; };
 		7C5D642622AD8C0800CA9C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642522AD8C0800CA9C12 /* Assets.xcassets */; };
 		7C5D642922AD8C0800CA9C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */; };
 		7C5D643422AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643322AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift */; };
 		7C5D643F22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643E22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift */; };
+		BFDC94B322ADFD4F0049EF00 /* TopStarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */; };
+		BFDC94B622AF1EC50049EF00 /* Repositorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B522AF1EC50049EF00 /* Repositorie.swift */; };
+		BFDC94B922AF243B0049EF00 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B822AF243B0049EF00 /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		7C5D641B22AD8C0600CA9C12 /* GitHub-Swift-Stars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub-Swift-Stars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C5D642022AD8C0600CA9C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C5D642322AD8C0600CA9C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C5D642522AD8C0800CA9C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5D642822AD8C0800CA9C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		7C5D643A22AD8C0800CA9C12 /* GitHub-Swift-StarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GitHub-Swift-StarsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5D643E22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_Swift_StarsUITests.swift; sourceTree = "<group>"; };
 		7C5D644022AD8C0800CA9C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarTableViewController.swift; sourceTree = "<group>"; };
+		BFDC94B522AF1EC50049EF00 /* Repositorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorie.swift; sourceTree = "<group>"; };
+		BFDC94B822AF243B0049EF00 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		7C5D641D22AD8C0600CA9C12 /* GitHub-Swift-Stars */ = {
 			isa = PBXGroup;
 			children = (
+				BFDC94B722AF24170049EF00 /* Networking */,
+				BFDC94B422AEF7190049EF00 /* Models */,
+				BFDC94B122ADFCDB0049EF00 /* Top Star List */,
 				7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */,
-				7C5D642022AD8C0600CA9C12 /* ViewController.swift */,
 				7C5D642222AD8C0600CA9C12 /* Main.storyboard */,
 				7C5D642522AD8C0800CA9C12 /* Assets.xcassets */,
 				7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */,
@@ -123,6 +129,30 @@
 				7C5D644022AD8C0800CA9C12 /* Info.plist */,
 			);
 			path = "GitHub-Swift-StarsUITests";
+			sourceTree = "<group>";
+		};
+		BFDC94B122ADFCDB0049EF00 /* Top Star List */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */,
+			);
+			path = "Top Star List";
+			sourceTree = "<group>";
+		};
+		BFDC94B422AEF7190049EF00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC94B522AF1EC50049EF00 /* Repositorie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFDC94B722AF24170049EF00 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC94B822AF243B0049EF00 /* Api.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5D642122AD8C0600CA9C12 /* ViewController.swift in Sources */,
+				BFDC94B322ADFD4F0049EF00 /* TopStarTableViewController.swift in Sources */,
+				BFDC94B622AF1EC50049EF00 /* Repositorie.swift in Sources */,
+				BFDC94B922AF243B0049EF00 /* Api.swift in Sources */,
 				7C5D641F22AD8C0600CA9C12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RN254RQSB;
 				INFOPLIST_FILE = "GitHub-Swift-Stars/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RN254RQSB;
 				INFOPLIST_FILE = "GitHub-Swift-Stars/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
