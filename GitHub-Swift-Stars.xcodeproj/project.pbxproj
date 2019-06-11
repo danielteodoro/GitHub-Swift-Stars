@@ -16,6 +16,7 @@
 		BFDC94B322ADFD4F0049EF00 /* TopStarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */; };
 		BFDC94B622AF1EC50049EF00 /* Repositorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B522AF1EC50049EF00 /* Repositorie.swift */; };
 		BFDC94B922AF243B0049EF00 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B822AF243B0049EF00 /* Api.swift */; };
+		BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarTableViewController.swift; sourceTree = "<group>"; };
 		BFDC94B522AF1EC50049EF00 /* Repositorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorie.swift; sourceTree = "<group>"; };
 		BFDC94B822AF243B0049EF00 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		BFDC94B122ADFCDB0049EF00 /* Top Star List */ = {
 			isa = PBXGroup;
 			children = (
+				BFDC94BA22AF3A7D0049EF00 /* Cells */,
 				BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */,
 			);
 			path = "Top Star List";
@@ -153,6 +156,14 @@
 				BFDC94B822AF243B0049EF00 /* Api.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		BFDC94BA22AF3A7D0049EF00 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 				BFDC94B322ADFD4F0049EF00 /* TopStarTableViewController.swift in Sources */,
 				BFDC94B622AF1EC50049EF00 /* Repositorie.swift in Sources */,
 				BFDC94B922AF243B0049EF00 /* Api.swift in Sources */,
+				BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */,
 				7C5D641F22AD8C0600CA9C12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

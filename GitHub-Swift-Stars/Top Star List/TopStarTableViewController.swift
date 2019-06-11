@@ -9,6 +9,8 @@
 import UIKit
 
 class TopStarTableViewController: UITableViewController {
+    
+    var repositoriesArray: Array<Repositorie> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,37 +23,45 @@ class TopStarTableViewController: UITableViewController {
         
         Api().getTopRepositories(completion: {(result) in
             switch result {
-            case .success(let repos):
-                print(repos)
+            case .success(let gitResponse):
+//                print(gitResponse)
+                self.repositoriesArray += gitResponse.items
+                print(self.repositoriesArray)
+                self.tableView.reloadData()
                 break
             case .failure( _):
                 print("Erro")
                 break
             }
         })
+        self.registerCustomCells()
+    }
+    
+    func registerCustomCells() {
+        tableView.register(RepositorieTableViewCell.self, forCellReuseIdentifier: "RepositorieCell")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return repositoriesArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell: RepositorieTableViewCell = tableView.dequeueReusableCell(withIdentifier: "RepositorieCell", for: indexPath) as! RepositorieTableViewCell
+        let repositorie = repositoriesArray[indexPath.row]
+        cell.repositorieName.text = repositorie.name
+        cell.stargazers.text = String(repositorie.stargazers)
+        cell.ownerLogin.text = repositorie.owner.login
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
