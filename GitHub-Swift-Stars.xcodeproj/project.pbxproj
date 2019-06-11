@@ -20,6 +20,7 @@
 		BFDC94B622AF1EC50049EF00 /* Repositorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B522AF1EC50049EF00 /* Repositorie.swift */; };
 		BFDC94B922AF243B0049EF00 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B822AF243B0049EF00 /* Api.swift */; };
 		BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */; };
+		BFDC94BF22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94BE22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		BFDC94B522AF1EC50049EF00 /* Repositorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorie.swift; sourceTree = "<group>"; };
 		BFDC94B822AF243B0049EF00 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieTableViewCell.swift; sourceTree = "<group>"; };
+		BFDC94BE22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarTableViewControllerSpec.swift; sourceTree = "<group>"; };
 		C41BC0950AE20AA1621A029C /* Pods-GitHub-Swift-StarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-StarsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-StarsUITests/Pods-GitHub-Swift-StarsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E9A9C4249CE86E28AA6305AF /* Pods_GitHub_Swift_StarsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Swift_StarsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86CE69DBC645A3552C19DCA /* Pods-GitHub-Swift-Stars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-Stars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-Stars/Pods-GitHub-Swift-Stars.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		7C5D643222AD8C0800CA9C12 /* GitHub-Swift-StarsTests */ = {
 			isa = PBXGroup;
 			children = (
+				BFDC94BD22AF6B040049EF00 /* Top Star LIst */,
 				7C5D643322AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift */,
 				7C5D643522AD8C0800CA9C12 /* Info.plist */,
 			);
@@ -206,6 +209,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BFDC94BD22AF6B040049EF00 /* Top Star LIst */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC94BE22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift */,
+			);
+			path = "Top Star LIst";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,6 +247,7 @@
 				7C5D642B22AD8C0800CA9C12 /* Sources */,
 				7C5D642C22AD8C0800CA9C12 /* Frameworks */,
 				7C5D642D22AD8C0800CA9C12 /* Resources */,
+				972017983268426365780113 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,6 +421,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		972017983268426365780113 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GitHub-Swift-StarsTests/Pods-GitHub-Swift-StarsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GitHub-Swift-StarsTests/Pods-GitHub-Swift-StarsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -428,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDC94BF22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift in Sources */,
 				7C5D643422AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,6 +669,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RN254RQSB;
 				INFOPLIST_FILE = "GitHub-Swift-StarsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -657,6 +691,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RN254RQSB;
 				INFOPLIST_FILE = "GitHub-Swift-StarsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
