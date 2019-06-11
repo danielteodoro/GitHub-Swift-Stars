@@ -15,12 +15,12 @@ class Api: URLSession {
         case failure(Error)
     }
     
-    func getTopRepositories(completion: ((Result<GitResponse>) -> Void)?) {
+    func getTopRepositories(row: Int, completion: ((Result<GitResponse>) -> Void)?) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.github.com"
         urlComponents.path = "/search/repositories"
-        urlComponents.query = "q=language:swift&sort=stars&page=1&per_page=25"
+        urlComponents.query = String(format: "q=language:swift&sort=stars&page=%i&per_page=25", row)
         guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
         
         var request = URLRequest(url: url)

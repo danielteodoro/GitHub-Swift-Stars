@@ -9,8 +9,8 @@
 import UIKit
 
 struct GitResponse: Codable {
-    let totalCount: Int
-    let imcompleteResult: Bool
+    let totalCount: Int?
+    let imcompleteResult: Bool?
     let items: [Repositorie]
     
     enum CodingKeys: String, CodingKey {
