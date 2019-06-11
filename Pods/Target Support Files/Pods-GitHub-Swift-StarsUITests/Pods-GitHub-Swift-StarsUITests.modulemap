@@ -1,0 +1,6 @@
+framework module Pods_GitHub_Swift_StarsUITests {
+  umbrella header "Pods-GitHub-Swift-StarsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

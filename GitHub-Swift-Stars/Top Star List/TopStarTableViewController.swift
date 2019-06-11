@@ -60,6 +60,7 @@ class TopStarTableViewController: UITableViewController {
         cell.repositorieName.text = repositorie.name
         cell.stargazers.text = String(repositorie.stargazers)
         cell.ownerLogin.text = repositorie.owner.login
+        cell.imgOwner.load.request(with: repositorie.owner.avatar_url)
         return cell
     }
 

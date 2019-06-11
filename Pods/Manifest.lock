@@ -1,0 +1,16 @@
+PODS:
+  - ImageLoader (0.14.0)
+
+DEPENDENCIES:
+  - ImageLoader
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ImageLoader
+
+SPEC CHECKSUMS:
+  ImageLoader: 56f57e35d6ed26a74183dc2e472133b4b22eb7b9
+
+PODFILE CHECKSUM: 4650e483561da2c83ea275dd021eeb2a986cfc0d
+
+COCOAPODS: 1.5.3
