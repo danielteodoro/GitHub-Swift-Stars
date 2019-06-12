@@ -36,8 +36,8 @@ class Api: URLSession {
                     let decoder = JSONDecoder()
                     
                     do {
-                        let posts = try decoder.decode(GitResponse.self, from: jsonData)
-                        completion?(.success(posts))
+                        let repos = try decoder.decode(GitResponse.self, from: jsonData)
+                        completion?(.success(repos))
                     } catch {
                         completion?(.failure(error))
                     }
