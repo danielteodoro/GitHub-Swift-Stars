@@ -1,5 +1,5 @@
 //
-//  RepositorieTableViewCell.swift
+//  RepositoryTableViewCell.swift
 //  GitHub-Swift-Stars
 //
 //  Created by Daniel Teodoro on 10/06/19.
@@ -9,10 +9,10 @@
 import UIKit
 import ImageLoader
 
-class RepositorieTableViewCell: UITableViewCell {
+class RepositoryTableViewCell: UITableViewCell {
     
     let imgOwner = UIImageView()
-    let repositorieName = UILabel()
+    let repositoryName = UILabel()
     let stargazers = UILabel()
     let ownerLogin = UILabel()
     
@@ -20,22 +20,22 @@ class RepositorieTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         imgOwner.translatesAutoresizingMaskIntoConstraints = false
-        repositorieName.translatesAutoresizingMaskIntoConstraints = false
+        repositoryName.translatesAutoresizingMaskIntoConstraints = false
         stargazers.translatesAutoresizingMaskIntoConstraints = false
         ownerLogin.translatesAutoresizingMaskIntoConstraints = false
         
-        repositorieName.textAlignment = NSTextAlignment.left
+        repositoryName.textAlignment = NSTextAlignment.left
         stargazers.textAlignment = NSTextAlignment.left
         ownerLogin.textAlignment = NSTextAlignment.right
         
         contentView.addSubview(imgOwner)
-        contentView.addSubview(repositorieName)
+        contentView.addSubview(repositoryName)
         contentView.addSubview(stargazers)
         contentView.addSubview(ownerLogin)
         
         let viewsDict = [
             "image" : imgOwner,
-            "repositorie" : repositorieName,
+            "repository" : repositoryName,
             "stargazers" : stargazers,
             "ownerLogin" : ownerLogin,
         ]
@@ -44,7 +44,7 @@ class RepositorieTableViewCell: UITableViewCell {
         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
          contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image]-10-[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[stargazers]-|", options: [], metrics: nil, views: viewsDict))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[repositorie]-[image(30)]-|", options: [], metrics: nil, views: viewsDict))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[repository]-[image(30)]-|", options: [], metrics: nil, views: viewsDict))
         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[stargazers]-[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
     }
     

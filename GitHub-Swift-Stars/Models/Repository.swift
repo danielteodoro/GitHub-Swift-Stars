@@ -1,5 +1,5 @@
 //
-//  Repositorie.swift
+//  Repository.swift
 //  GitHub-Swift-Stars
 //
 //  Created by Daniel Teodoro on 10/06/19.
@@ -11,7 +11,7 @@ import UIKit
 struct GitResponse: Codable {
     let totalCount: Int?
     let imcompleteResult: Bool?
-    let items: [Repositorie]
+    let items: Array<Repository>
     
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
@@ -20,7 +20,7 @@ struct GitResponse: Codable {
     }
 }
 
-struct Repositorie: Codable {
+struct Repository: Codable {
     var name: String
     var stargazers: Int
     var owner: Owner

@@ -14,6 +14,7 @@ target 'GitHub-Swift-Stars' do
     # Pods for testing
 	pod 'Quick', '~> 2.1'
     	pod 'Nimble', '~> 8.0'
+	pod 'Nimble-Snapshots', '~> 7.1'
   end
 
   target 'GitHub-Swift-StarsUITests' do

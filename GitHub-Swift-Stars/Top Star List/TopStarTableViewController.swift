@@ -10,9 +10,11 @@ import UIKit
 
 class TopStarTableViewController: UITableViewController {
     
-    var repositoriesArray: Array<Repositorie> = []
+    var repositoriesArray: Array<Repository> = []
     
     let perPage: Int = 25
+    
+    let kCellId = "RepositoryCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class TopStarTableViewController: UITableViewController {
         self.registerCustomCells()
     }
     
+    // MARK: Controls
+    
     @IBAction func refresh(sender:AnyObject) {
         repositoriesArray.removeAll()
         self.tableView.reloadData()
@@ -33,7 +37,7 @@ class TopStarTableViewController: UITableViewController {
     }
     
     func registerCustomCells() {
-        tableView.register(RepositorieTableViewCell.self, forCellReuseIdentifier: "RepositorieCell")
+        tableView.register(RepositoryTableViewCell.self, forCellReuseIdentifier: kCellId)
     }
 
     // MARK: - Table view data source
@@ -50,12 +54,12 @@ class TopStarTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: RepositorieTableViewCell = tableView.dequeueReusableCell(withIdentifier: "RepositorieCell", for: indexPath) as! RepositorieTableViewCell
-        let repositorie = repositoriesArray[indexPath.row]
-        cell.repositorieName.text = repositorie.name
-        cell.stargazers.text = String(repositorie.stargazers)
-        cell.ownerLogin.text = repositorie.owner.login
-        cell.imgOwner.load.request(with: repositorie.owner.avatar_url)
+        let cell: RepositoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: kCellId, for: indexPath) as! RepositoryTableViewCell
+        let repository = repositoriesArray[indexPath.row]
+        cell.repositoryName.text = repository.name
+        cell.stargazers.text = String(repository.stargazers)
+        cell.ownerLogin.text = repository.owner.login
+        cell.imgOwner.load.request(with: repository.owner.avatar_url)
         
         if indexPath.row == (self.repositoriesArray.count-5) {
             self.fetchRepositories(forRow: (self.repositoriesArray.count/2)+1)
@@ -64,61 +68,14 @@ class TopStarTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+  
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-    
-//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//
-//        // calculates where the user is in the y-axis
-//        let offsetY = scrollView.contentOffset.y
-//        let contentHeight = scrollView.contentSize.height
-//
-//        if offsetY > contentHeight - scrollView.frame.size.height {
-//            self.fetchRepositories(forRow: (self.repositoriesArray.count/2)+1)
-//        }
-//    }
-
-    // MARK: - Navigation
+    // MARK: - Fetching
     func fetchRepositories(forRow row: Int) {
         Api().getTopRepositories(row: row, completion: {(result) in
             switch result {
             case .success(let gitResponse):
-                self.repositoriesArray += gitResponse.items
-                print(self.repositoriesArray)
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
+                self.handleResponse(gitResponse)
                 break
             case .failure( _):
                 self.showError()
@@ -127,6 +84,16 @@ class TopStarTableViewController: UITableViewController {
         })
     }
     
+    func handleResponse(_ response: GitResponse) {
+        self.repositoriesArray += response.items
+        print(self.repositoriesArray)
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
+    
+    
+    
+    // MARK: - Error
     func showError() {
         let alert = UIAlertController(title: "Erro", message: "Algo deu errado, tente novamente mais tarde.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

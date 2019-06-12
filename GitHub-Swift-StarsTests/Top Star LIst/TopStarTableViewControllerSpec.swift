@@ -13,19 +13,34 @@ import Nimble
 
 class TopStarTableViewControllerSpec: QuickSpec {
 
-    var controller = TopStarTableViewController()
+    
     
     override func spec() {
         describe("the 'Documentation' directory") {
             
+            var controller = TopStarTableViewController()
+            
             beforeEach {
-                _ = self.controller.view
+                _ = controller.view
             }
             
-            it("has everything you need to get started") {
-                self.controller.showError()
-                expect(self.controller.perPage).to(equal(25))
+            it("has everything you need to get started") { controller.handleResponse(self.getMockedGitResponse()!)
+                expect(controller.repositoriesArray[1].name).to(equal( self.getMockedGitResponse()!.items[1].name))
             }
+        }
+    }
+    
+    func getMockedGitResponse() -> GitResponse? {
+        let bundle = Bundle(for: type(of: self))
+        let fileUrl = bundle.url(forResource: "GitHubTopListMock", withExtension: "json")
+        let data = try! Data(contentsOf: fileUrl!)
+        
+        let decoder = JSONDecoder()
+        do {
+            let gitResponse = try decoder.decode(GitResponse.self, from: data)
+            return gitResponse
+        } catch {
+            return nil
         }
     }
 }

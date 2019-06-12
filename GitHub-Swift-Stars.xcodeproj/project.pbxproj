@@ -16,8 +16,9 @@
 		7C5D642922AD8C0800CA9C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */; };
 		7C5D643422AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643322AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift */; };
 		7C5D643F22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643E22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift */; };
+		BF9E302F22B07750009F84BE /* GitHubTopListMock.json in Resources */ = {isa = PBXBuildFile; fileRef = BF9E302E22B07750009F84BE /* GitHubTopListMock.json */; };
 		BFDC94B322ADFD4F0049EF00 /* TopStarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */; };
-		BFDC94B622AF1EC50049EF00 /* Repositorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B522AF1EC50049EF00 /* Repositorie.swift */; };
+		BFDC94B622AF1EC50049EF00 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B522AF1EC50049EF00 /* Repository.swift */; };
 		BFDC94B922AF243B0049EF00 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B822AF243B0049EF00 /* Api.swift */; };
 		BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */; };
 		BFDC94BF22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94BE22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift */; };
@@ -59,8 +60,9 @@
 		8F28EC134492877BBFDC7842 /* Pods_GitHub_Swift_StarsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Swift_StarsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53527E043E98EA071D54EC2 /* Pods-GitHub-Swift-Stars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-Stars.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-Stars/Pods-GitHub-Swift-Stars.release.xcconfig"; sourceTree = "<group>"; };
 		B8416CE12B7BD84ACA81C70B /* Pods-GitHub-Swift-StarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-StarsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-StarsTests/Pods-GitHub-Swift-StarsTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF9E302E22B07750009F84BE /* GitHubTopListMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GitHubTopListMock.json; sourceTree = "<group>"; };
 		BFDC94B222ADFD4F0049EF00 /* TopStarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarTableViewController.swift; sourceTree = "<group>"; };
-		BFDC94B522AF1EC50049EF00 /* Repositorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorie.swift; sourceTree = "<group>"; };
+		BFDC94B522AF1EC50049EF00 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		BFDC94B822AF243B0049EF00 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieTableViewCell.swift; sourceTree = "<group>"; };
 		BFDC94BE22AF6B280049EF00 /* TopStarTableViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarTableViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		7C5D643222AD8C0800CA9C12 /* GitHub-Swift-StarsTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF9E302D22B076D1009F84BE /* JSON */,
 				BFDC94BD22AF6B040049EF00 /* Top Star LIst */,
 				7C5D643322AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift */,
 				7C5D643522AD8C0800CA9C12 /* Info.plist */,
@@ -176,6 +179,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF9E302D22B076D1009F84BE /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E302E22B07750009F84BE /* GitHubTopListMock.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		BFDC94B122ADFCDB0049EF00 /* Top Star List */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +199,7 @@
 		BFDC94B422AEF7190049EF00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BFDC94B522AF1EC50049EF00 /* Repositorie.swift */,
+				BFDC94B522AF1EC50049EF00 /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9E302F22B07750009F84BE /* GitHubTopListMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,12 +441,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GitHub-Swift-StarsTests/Pods-GitHub-Swift-StarsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -449,7 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFDC94B322ADFD4F0049EF00 /* TopStarTableViewController.swift in Sources */,
-				BFDC94B622AF1EC50049EF00 /* Repositorie.swift in Sources */,
+				BFDC94B622AF1EC50049EF00 /* Repository.swift in Sources */,
 				BFDC94B922AF243B0049EF00 /* Api.swift in Sources */,
 				BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */,
 				7C5D641F22AD8C0600CA9C12 /* AppDelegate.swift in Sources */,
