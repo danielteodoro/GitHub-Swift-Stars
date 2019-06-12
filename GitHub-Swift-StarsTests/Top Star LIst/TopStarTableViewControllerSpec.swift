@@ -16,15 +16,15 @@ class TopStarTableViewControllerSpec: QuickSpec {
     
     
     override func spec() {
-        describe("the 'Documentation' directory") {
+        describe("should test TopStarTableViewController") {
             
-            var controller = TopStarTableViewController()
+            let controller = TopStarTableViewController()
             
             beforeEach {
                 _ = controller.view
             }
             
-            it("has everything you need to get started") { controller.handleResponse(self.getMockedGitResponse()!)
+            it("should test handleResponse") { controller.handleResponse(self.getMockedGitResponse()!)
                 expect(controller.repositoriesArray[1].name).to(equal( self.getMockedGitResponse()!.items[1].name))
             }
         }
