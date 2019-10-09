@@ -12,9 +12,9 @@ target 'GitHub-Swift-Stars' do
   target 'GitHub-Swift-StarsTests' do
     inherit! :search_paths
     # Pods for testing
-	pod 'Quick', '~> 2.1'
-    	pod 'Nimble', '~> 8.0'
-	pod 'Nimble-Snapshots', '~> 7.1'
+	pod 'Quick'
+    	pod 'Nimble'
+	pod 'Nimble-Snapshots'
   end
 
   target 'GitHub-Swift-StarsUITests' do
