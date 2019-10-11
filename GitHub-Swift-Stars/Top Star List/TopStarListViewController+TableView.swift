@@ -11,7 +11,7 @@ import UIKit
 extension TopStarListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func registerCustomCells() {
-        tableView.register(RepositoryTableViewCell.self, forCellReuseIdentifier: kCellId)
+        screen.tableView.register(RepositoryTableViewCell.self, forCellReuseIdentifier: kCellId)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

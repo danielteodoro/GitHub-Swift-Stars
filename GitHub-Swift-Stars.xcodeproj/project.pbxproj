@@ -20,6 +20,7 @@
 		BFD564D6234C2E4E0073F3DC /* TopStarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564D5234C2E4E0073F3DC /* TopStarListViewController.swift */; };
 		BFD564D8234C2ED80073F3DC /* TopListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564D7234C2ED80073F3DC /* TopListViewModel.swift */; };
 		BFD564DA234C308F0073F3DC /* TopStarListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564D9234C308F0073F3DC /* TopStarListViewController+TableView.swift */; };
+		BFD564DC235015150073F3DC /* TopStarListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564DB235015150073F3DC /* TopStarListScreen.swift */; };
 		BFDC94B622AF1EC50049EF00 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B522AF1EC50049EF00 /* Repository.swift */; };
 		BFDC94B922AF243B0049EF00 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B822AF243B0049EF00 /* Api.swift */; };
 		BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */; };
@@ -66,6 +67,7 @@
 		BFD564D5234C2E4E0073F3DC /* TopStarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarListViewController.swift; sourceTree = "<group>"; };
 		BFD564D7234C2ED80073F3DC /* TopListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListViewModel.swift; sourceTree = "<group>"; };
 		BFD564D9234C308F0073F3DC /* TopStarListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopStarListViewController+TableView.swift"; sourceTree = "<group>"; };
+		BFD564DB235015150073F3DC /* TopStarListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarListScreen.swift; sourceTree = "<group>"; };
 		BFDC94B522AF1EC50049EF00 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		BFDC94B822AF243B0049EF00 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 				BFDC94B722AF24170049EF00 /* Networking */,
 				BFDC94B422AEF7190049EF00 /* Models */,
 				BFDC94B122ADFCDB0049EF00 /* Top Star List */,
-				7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */,
 				7C5D642222AD8C0600CA9C12 /* Main.storyboard */,
 				7C5D642522AD8C0800CA9C12 /* Assets.xcassets */,
 				7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */,
@@ -198,6 +199,8 @@
 				BFD564D5234C2E4E0073F3DC /* TopStarListViewController.swift */,
 				BFD564D9234C308F0073F3DC /* TopStarListViewController+TableView.swift */,
 				BFD564D7234C2ED80073F3DC /* TopListViewModel.swift */,
+				BFD564DB235015150073F3DC /* TopStarListScreen.swift */,
+				7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */,
 			);
 			path = "Top Star List";
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				BFD564D6234C2E4E0073F3DC /* TopStarListViewController.swift in Sources */,
 				BFD564DA234C308F0073F3DC /* TopStarListViewController+TableView.swift in Sources */,
 				BFDC94B622AF1EC50049EF00 /* Repository.swift in Sources */,
+				BFD564DC235015150073F3DC /* TopStarListScreen.swift in Sources */,
 				BFDC94B922AF243B0049EF00 /* Api.swift in Sources */,
 				BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */,
 				BFD564D8234C2ED80073F3DC /* TopListViewModel.swift in Sources */,
