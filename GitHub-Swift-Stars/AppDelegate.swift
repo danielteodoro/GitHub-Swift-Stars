@@ -10,17 +10,20 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var coordinator: MainCoordinator?
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let navController = UINavigationController()
+        coordinator = MainCoordinator(navigationController: navController)
+        coordinator?.start()
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = navController
         self.window = window
         
-        let controller = TopStarListViewController()
-        window.rootViewController = controller
         
         window.makeKeyAndVisible()
         

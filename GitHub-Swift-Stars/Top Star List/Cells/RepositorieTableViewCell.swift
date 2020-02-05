@@ -29,23 +29,27 @@ class RepositoryTableViewCell: UITableViewCell {
         ownerLogin.textAlignment = NSTextAlignment.right
         
         contentView.addSubview(imgOwner)
-        contentView.addSubview(repositoryName)
-        contentView.addSubview(stargazers)
-        contentView.addSubview(ownerLogin)
+//        contentView.addSubview(repositoryName)
+//        contentView.addSubview(stargazers)
+//        contentView.addSubview(ownerLogin)
         
-        let viewsDict = [
-            "image" : imgOwner,
-            "repository" : repositoryName,
-            "stargazers" : stargazers,
-            "ownerLogin" : ownerLogin,
-        ]
+//        let viewsDict = [
+//            "image" : imgOwner,
+//            "repository" : repositoryName,
+//            "stargazers" : stargazers,
+//            "ownerLogin" : ownerLogin,
+//        ]
         
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image(30)]", options: [], metrics: nil, views: viewsDict))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
-         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image]-10-[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[stargazers]-|", options: [], metrics: nil, views: viewsDict))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[repository]-[image(30)]-|", options: [], metrics: nil, views: viewsDict))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[stargazers]-[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
+        imgOwner.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
+        imgOwner.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+        imgOwner.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        imgOwner.widthAnchor.constraint(equalToConstant: 30).isActive = true
+//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image(30)]", options: [], metrics: nil, views: viewsDict))
+//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
+//         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[image]-10-[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
+//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[stargazers]-|", options: [], metrics: nil, views: viewsDict))
+//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[repository]-[image(30)]-|", options: [], metrics: nil, views: viewsDict))
+//        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[stargazers]-[ownerLogin]-|", options: [], metrics: nil, views: viewsDict))
     }
     
     required init?(coder aDecoder: NSCoder) {

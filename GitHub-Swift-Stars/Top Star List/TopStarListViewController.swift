@@ -8,19 +8,18 @@
 
 import UIKit
 
-class TopStarListViewController: UIViewController {
+class TopStarListViewController: UIViewController, Storyboarded {
+    static func instantiate() -> Self {
+        return Self()
+    }
     
     let screen = TopStarListScreen()
-    
-    //    var repositoriesArray: Array<Repository> = []
-//    var tableView: UITableView! = UITableView()
     
     let viewModel: TopListViewModel = TopListViewModel()
     
     let kCellId = "RepositoryCell"
     
     override func loadView() {
-        
         self.view = screen
         screen.tableView.dataSource = self
         screen.tableView.delegate = self
