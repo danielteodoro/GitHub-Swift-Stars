@@ -15,6 +15,7 @@
 		7C5D642922AD8C0800CA9C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */; };
 		7C5D643422AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643322AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift */; };
 		7C5D643F22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643E22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift */; };
+		BF7B91742406AEF600169BDD /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B91732406AEF600169BDD /* ViewCodeProtocol.swift */; };
 		BF8CBAAB23DA7891004FAB89 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CBAAA23DA7891004FAB89 /* Coordinator.swift */; };
 		BF8CBAAD23DA790B004FAB89 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CBAAC23DA790B004FAB89 /* Storyboarded.swift */; };
 		BF8CBAAF23DA7B8B004FAB89 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CBAAE23DA7B8B004FAB89 /* MainCoordinator.swift */; };
@@ -64,6 +65,7 @@
 		8F28EC134492877BBFDC7842 /* Pods_GitHub_Swift_StarsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Swift_StarsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53527E043E98EA071D54EC2 /* Pods-GitHub-Swift-Stars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-Stars.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-Stars/Pods-GitHub-Swift-Stars.release.xcconfig"; sourceTree = "<group>"; };
 		B8416CE12B7BD84ACA81C70B /* Pods-GitHub-Swift-StarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-StarsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-StarsTests/Pods-GitHub-Swift-StarsTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF7B91732406AEF600169BDD /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 		BF8CBAAA23DA7891004FAB89 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BF8CBAAC23DA790B004FAB89 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		BF8CBAAE23DA7B8B004FAB89 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				BFDC94B722AF24170049EF00 /* Networking */,
 				BFDC94B422AEF7190049EF00 /* Models */,
 				BFDC94B122ADFCDB0049EF00 /* Top Star List */,
+				BF7B91722406AED500169BDD /* Protocols */,
 				7C5D642522AD8C0800CA9C12 /* Assets.xcassets */,
 				7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */,
 				7C5D642A22AD8C0800CA9C12 /* Info.plist */,
@@ -187,6 +190,14 @@
 				E9A9C4249CE86E28AA6305AF /* Pods_GitHub_Swift_StarsUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF7B91722406AED500169BDD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF7B91732406AEF600169BDD /* ViewCodeProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BF8CBAA923DA7120004FAB89 /* Navigation */ = {
@@ -479,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD564D6234C2E4E0073F3DC /* TopStarListViewController.swift in Sources */,
+				BF7B91742406AEF600169BDD /* ViewCodeProtocol.swift in Sources */,
 				BFD564DA234C308F0073F3DC /* TopStarListViewController+TableView.swift in Sources */,
 				BFDC94B622AF1EC50049EF00 /* Repository.swift in Sources */,
 				BFD564DC235015150073F3DC /* TopStarListScreen.swift in Sources */,
