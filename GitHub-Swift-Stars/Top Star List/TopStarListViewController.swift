@@ -8,10 +8,7 @@
 
 import UIKit
 
-class TopStarListViewController: UIViewController, Storyboarded {
-    static func instantiate() -> Self {
-        return Self()
-    }
+class TopStarListViewController: UIViewController {
     
     let screen = TopStarListScreen()
     

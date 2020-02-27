@@ -18,7 +18,7 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = TopStarListViewController.instantiate()
+        let vc = TopStarListViewController()
         navigationController.pushViewController(vc, animated: false)
     }
 }
