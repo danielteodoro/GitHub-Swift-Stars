@@ -19,6 +19,14 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let vc = TopStarListViewController()
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func repositoryDetail(withRepository repository: Repository) {
+        let vc = RepositoryDetailViewController()
+        vc.repository = repository
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }

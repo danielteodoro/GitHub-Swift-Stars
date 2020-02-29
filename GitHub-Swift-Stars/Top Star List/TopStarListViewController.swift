@@ -10,6 +10,8 @@ import UIKit
 
 class TopStarListViewController: UIViewController {
     
+    weak var coordinator: MainCoordinator?
+    
     let screen = TopStarListScreen()
     
     let viewModel: TopListViewModel = TopListViewModel()

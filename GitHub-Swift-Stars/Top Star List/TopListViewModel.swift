@@ -29,6 +29,10 @@ class TopListViewModel: NSObject {
         self.fetchRepositories()
     }
     
+    func getRepository(atIndex index:Int) -> Repository {
+        return self.repositoriesArray[index]
+    }
+    
     func handleResponse(_ response: GitResponse) {
         self.repositoriesArray += response.items
         self.delegate?.didRefreshRepositories()
@@ -40,7 +44,7 @@ class TopListViewModel: NSObject {
     
     func getCell(_ cell: RepositoryTableViewCell, forIndex indexPath: IndexPath) -> RepositoryTableViewCell {
         
-               let repository = self.repositoriesArray[indexPath.row]
+        let repository = self.getRepository(atIndex: indexPath.row)
                cell.repositoryName.text = repository.name
                cell.stargazers.text = String(repository.stargazers)
                cell.ownerLogin.text = repository.owner.login

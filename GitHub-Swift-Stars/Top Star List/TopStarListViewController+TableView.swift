@@ -23,4 +23,8 @@ extension TopStarListViewController: UITableViewDelegate, UITableViewDataSource 
         
         return viewModel.getCell(cell, forIndex: indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.repositoryDetail(withRepository: viewModel.getRepository(atIndex: indexPath.row))
+    }
 }
