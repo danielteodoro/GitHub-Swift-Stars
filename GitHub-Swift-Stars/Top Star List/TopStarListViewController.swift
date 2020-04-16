@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopStarListViewController: UIViewController {
+class TopStarListViewController: UIViewController, TopStarListScreenDelegate {
     
     weak var coordinator: MainCoordinator?
     
@@ -30,8 +30,9 @@ class TopStarListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        screen.tableView.refreshControl = UIRefreshControl()
-        screen.tableView.refreshControl!.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        screen.delegate = self
+        screen.setRefreshControls()
         
         viewModel.delegate = self
         
@@ -42,6 +43,10 @@ class TopStarListViewController: UIViewController {
     @IBAction func refresh(sender:AnyObject) {
         viewModel.refreshArray()
         screen.tableView.reloadData()
+    }
+    
+    func refreshList() {
+        refresh(sender: self)
     }
 }
 

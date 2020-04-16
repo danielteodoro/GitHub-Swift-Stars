@@ -6,7 +6,7 @@
 //  Copyright © 2019 DanielTeodoro. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol TopListViewModelDelegate {
     func showError()

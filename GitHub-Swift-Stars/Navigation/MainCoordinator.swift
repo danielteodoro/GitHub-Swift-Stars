@@ -25,7 +25,7 @@ class MainCoordinator: Coordinator {
     
     func repositoryDetail(withRepository repository: Repository) {
         let vc = RepositoryDetailViewController()
-        vc.repository = repository
+        vc.viewModel.repository = repository
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
