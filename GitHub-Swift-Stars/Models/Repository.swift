@@ -6,21 +6,9 @@
 //  Copyright © 2019 DanielTeodoro. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-struct GitResponse: Codable {
-    let totalCount: Int?
-    let imcompleteResult: Bool?
-    let items: Array<Repository>
-    
-    enum CodingKeys: String, CodingKey {
-        case totalCount = "total_count"
-        case imcompleteResult = "incomplete_results"
-        case items = "items"
-    }
-}
-
-struct Repository: Codable {
+class Repository: Codable {
     var name: String
     var stargazers: Int
     var owner: Owner
@@ -31,14 +19,3 @@ struct Repository: Codable {
         case owner = "owner"
     }
 }
-
-struct Owner: Codable {
-    var login: String
-    var avatar_url: String
-    
-    enum CodingKeys: String, CodingKey {
-        case login = "login"
-        case avatar_url = "avatar_url"
-    }
-}
-

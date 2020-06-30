@@ -8,16 +8,21 @@
 
 import UIKit
 
-class TopStarListViewController: UIViewController {
+class TopStarListViewController: UIViewController, TopStarListScreenDelegate {
     
-    //    var repositoriesArray: Array<Repository> = []
-    @IBOutlet weak var tableView: UITableView!
+    weak var coordinator: MainCoordinator?
+    
+    let screen = TopStarListScreen()
     
     let viewModel: TopListViewModel = TopListViewModel()
     
-    
-    
     let kCellId = "RepositoryCell"
+    
+    override func loadView() {
+        self.view = screen
+        screen.tableView.dataSource = self
+        screen.tableView.delegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +30,23 @@ class TopStarListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.tableView.refreshControl = UIRefreshControl()
-        self.tableView.refreshControl!.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        screen.delegate = self
+        screen.setRefreshControls()
         
         viewModel.delegate = self
         
         self.registerCustomCells()
     }
-    // MARK: Controls
     
+    // MARK: Controls
     @IBAction func refresh(sender:AnyObject) {
         viewModel.refreshArray()
-        self.tableView.reloadData()
+        screen.tableView.reloadData()
+    }
+    
+    func refreshList() {
+        refresh(sender: self)
     }
 }
 
@@ -48,7 +58,7 @@ extension TopStarListViewController: TopListViewModelDelegate {
     }
     
     func didRefreshRepositories() {
-        self.tableView.reloadData()
-        self.tableView.refreshControl?.endRefreshing()
+        screen.tableView.reloadData()
+        screen.tableView.refreshControl?.endRefreshing()
     }
 }

@@ -11,15 +11,23 @@
 		16AAC80ACB45607653C04C2E /* Pods_GitHub_Swift_Stars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885E0DF88E720AA5A416882D /* Pods_GitHub_Swift_Stars.framework */; };
 		203AFFF8429433991B6A8C89 /* Pods_GitHub_Swift_StarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F28EC134492877BBFDC7842 /* Pods_GitHub_Swift_StarsTests.framework */; };
 		7C5D641F22AD8C0600CA9C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */; };
-		7C5D642422AD8C0600CA9C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642222AD8C0600CA9C12 /* Main.storyboard */; };
 		7C5D642622AD8C0800CA9C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642522AD8C0800CA9C12 /* Assets.xcassets */; };
 		7C5D642922AD8C0800CA9C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */; };
 		7C5D643422AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643322AD8C0800CA9C12 /* GitHub_Swift_StarsTests.swift */; };
 		7C5D643F22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D643E22AD8C0800CA9C12 /* GitHub_Swift_StarsUITests.swift */; };
+		BF7B91742406AEF600169BDD /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B91732406AEF600169BDD /* ViewCodeProtocol.swift */; };
+		BF7B91762407431B00169BDD /* GitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B91752407431B00169BDD /* GitResponse.swift */; };
+		BF7B91782407434900169BDD /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B91772407434900169BDD /* Owner.swift */; };
+		BF7B917B24074DA200169BDD /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B917A24074DA200169BDD /* RepositoryDetailViewController.swift */; };
+		BF7B917F240ADDB800169BDD /* RepositoryDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B917E240ADDB800169BDD /* RepositoryDetailScreen.swift */; };
+		BF8CBAAB23DA7891004FAB89 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CBAAA23DA7891004FAB89 /* Coordinator.swift */; };
+		BF8CBAAF23DA7B8B004FAB89 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8CBAAE23DA7B8B004FAB89 /* MainCoordinator.swift */; };
+		BF987AE22441415700731CA7 /* RepositoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF987AE12441415700731CA7 /* RepositoryDetailViewModel.swift */; };
 		BF9E302F22B07750009F84BE /* GitHubTopListMock.json in Resources */ = {isa = PBXBuildFile; fileRef = BF9E302E22B07750009F84BE /* GitHubTopListMock.json */; };
 		BFD564D6234C2E4E0073F3DC /* TopStarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564D5234C2E4E0073F3DC /* TopStarListViewController.swift */; };
 		BFD564D8234C2ED80073F3DC /* TopListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564D7234C2ED80073F3DC /* TopListViewModel.swift */; };
 		BFD564DA234C308F0073F3DC /* TopStarListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564D9234C308F0073F3DC /* TopStarListViewController+TableView.swift */; };
+		BFD564DC235015150073F3DC /* TopStarListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD564DB235015150073F3DC /* TopStarListScreen.swift */; };
 		BFDC94B622AF1EC50049EF00 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B522AF1EC50049EF00 /* Repository.swift */; };
 		BFDC94B922AF243B0049EF00 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94B822AF243B0049EF00 /* Api.swift */; };
 		BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */; };
@@ -47,7 +55,6 @@
 		28F02010011D54305A325FDD /* Pods-GitHub-Swift-StarsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-StarsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-StarsTests/Pods-GitHub-Swift-StarsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C5D641B22AD8C0600CA9C12 /* GitHub-Swift-Stars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub-Swift-Stars.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C5D642322AD8C0600CA9C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C5D642522AD8C0800CA9C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5D642822AD8C0800CA9C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C5D642A22AD8C0800CA9C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,10 +69,19 @@
 		8F28EC134492877BBFDC7842 /* Pods_GitHub_Swift_StarsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHub_Swift_StarsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53527E043E98EA071D54EC2 /* Pods-GitHub-Swift-Stars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-Stars.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-Stars/Pods-GitHub-Swift-Stars.release.xcconfig"; sourceTree = "<group>"; };
 		B8416CE12B7BD84ACA81C70B /* Pods-GitHub-Swift-StarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub-Swift-StarsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub-Swift-StarsTests/Pods-GitHub-Swift-StarsTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF7B91732406AEF600169BDD /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
+		BF7B91752407431B00169BDD /* GitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitResponse.swift; sourceTree = "<group>"; };
+		BF7B91772407434900169BDD /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		BF7B917A24074DA200169BDD /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
+		BF7B917E240ADDB800169BDD /* RepositoryDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailScreen.swift; sourceTree = "<group>"; };
+		BF8CBAAA23DA7891004FAB89 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BF8CBAAE23DA7B8B004FAB89 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BF987AE12441415700731CA7 /* RepositoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewModel.swift; sourceTree = "<group>"; };
 		BF9E302E22B07750009F84BE /* GitHubTopListMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GitHubTopListMock.json; sourceTree = "<group>"; };
 		BFD564D5234C2E4E0073F3DC /* TopStarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarListViewController.swift; sourceTree = "<group>"; };
 		BFD564D7234C2ED80073F3DC /* TopListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListViewModel.swift; sourceTree = "<group>"; };
 		BFD564D9234C308F0073F3DC /* TopStarListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopStarListViewController+TableView.swift"; sourceTree = "<group>"; };
+		BFD564DB235015150073F3DC /* TopStarListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStarListScreen.swift; sourceTree = "<group>"; };
 		BFDC94B522AF1EC50049EF00 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		BFDC94B822AF243B0049EF00 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		BFDC94BB22AF3AA40049EF00 /* RepositorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorieTableViewCell.swift; sourceTree = "<group>"; };
@@ -128,11 +144,13 @@
 		7C5D641D22AD8C0600CA9C12 /* GitHub-Swift-Stars */ = {
 			isa = PBXGroup;
 			children = (
+				7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */,
+				BF8CBAA923DA7120004FAB89 /* Navigation */,
 				BFDC94B722AF24170049EF00 /* Networking */,
 				BFDC94B422AEF7190049EF00 /* Models */,
 				BFDC94B122ADFCDB0049EF00 /* Top Star List */,
-				7C5D641E22AD8C0600CA9C12 /* AppDelegate.swift */,
-				7C5D642222AD8C0600CA9C12 /* Main.storyboard */,
+				BF7B917924074D6E00169BDD /* Repository Detail */,
+				BF7B91722406AED500169BDD /* Protocols */,
 				7C5D642522AD8C0800CA9C12 /* Assets.xcassets */,
 				7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */,
 				7C5D642A22AD8C0800CA9C12 /* Info.plist */,
@@ -183,6 +201,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF7B91722406AED500169BDD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF7B91732406AEF600169BDD /* ViewCodeProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BF7B917924074D6E00169BDD /* Repository Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BF7B917A24074DA200169BDD /* RepositoryDetailViewController.swift */,
+				BF987AE12441415700731CA7 /* RepositoryDetailViewModel.swift */,
+				BF7B917E240ADDB800169BDD /* RepositoryDetailScreen.swift */,
+			);
+			path = "Repository Detail";
+			sourceTree = "<group>";
+		};
+		BF8CBAA923DA7120004FAB89 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BF8CBAAA23DA7891004FAB89 /* Coordinator.swift */,
+				BF8CBAAE23DA7B8B004FAB89 /* MainCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		BF9E302D22B076D1009F84BE /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +243,7 @@
 				BFD564D5234C2E4E0073F3DC /* TopStarListViewController.swift */,
 				BFD564D9234C308F0073F3DC /* TopStarListViewController+TableView.swift */,
 				BFD564D7234C2ED80073F3DC /* TopListViewModel.swift */,
+				BFD564DB235015150073F3DC /* TopStarListScreen.swift */,
 			);
 			path = "Top Star List";
 			sourceTree = "<group>";
@@ -206,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				BFDC94B522AF1EC50049EF00 /* Repository.swift */,
+				BF7B91752407431B00169BDD /* GitResponse.swift */,
+				BF7B91772407434900169BDD /* Owner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,7 +393,6 @@
 			files = (
 				7C5D642922AD8C0800CA9C12 /* LaunchScreen.storyboard in Resources */,
 				7C5D642622AD8C0800CA9C12 /* Assets.xcassets in Resources */,
-				7C5D642422AD8C0600CA9C12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,13 +509,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7B91782407434900169BDD /* Owner.swift in Sources */,
 				BFD564D6234C2E4E0073F3DC /* TopStarListViewController.swift in Sources */,
+				BF7B91742406AEF600169BDD /* ViewCodeProtocol.swift in Sources */,
 				BFD564DA234C308F0073F3DC /* TopStarListViewController+TableView.swift in Sources */,
+				BF7B91762407431B00169BDD /* GitResponse.swift in Sources */,
+				BF7B917B24074DA200169BDD /* RepositoryDetailViewController.swift in Sources */,
 				BFDC94B622AF1EC50049EF00 /* Repository.swift in Sources */,
+				BFD564DC235015150073F3DC /* TopStarListScreen.swift in Sources */,
 				BFDC94B922AF243B0049EF00 /* Api.swift in Sources */,
+				BF987AE22441415700731CA7 /* RepositoryDetailViewModel.swift in Sources */,
+				BF8CBAAF23DA7B8B004FAB89 /* MainCoordinator.swift in Sources */,
+				BF7B917F240ADDB800169BDD /* RepositoryDetailScreen.swift in Sources */,
 				BFDC94BC22AF3AA40049EF00 /* RepositorieTableViewCell.swift in Sources */,
 				BFD564D8234C2ED80073F3DC /* TopListViewModel.swift in Sources */,
 				7C5D641F22AD8C0600CA9C12 /* AppDelegate.swift in Sources */,
+				BF8CBAAB23DA7891004FAB89 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,14 +561,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7C5D642222AD8C0600CA9C12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C5D642322AD8C0600CA9C12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C5D642722AD8C0800CA9C12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -645,6 +693,7 @@
 			baseConfigurationReference = F86CE69DBC645A3552C19DCA /* Pods-GitHub-Swift-Stars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RN254RQSB;
 				INFOPLIST_FILE = "GitHub-Swift-Stars/Info.plist";
@@ -654,6 +703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "DanielTeodoro.GitHub-Swift-Stars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -664,6 +714,7 @@
 			baseConfigurationReference = A53527E043E98EA071D54EC2 /* Pods-GitHub-Swift-Stars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9RN254RQSB;
 				INFOPLIST_FILE = "GitHub-Swift-Stars/Info.plist";
@@ -673,6 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "DanielTeodoro.GitHub-Swift-Stars";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

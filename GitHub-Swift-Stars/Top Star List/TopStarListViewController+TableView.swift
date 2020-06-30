@@ -11,7 +11,7 @@ import UIKit
 extension TopStarListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func registerCustomCells() {
-        tableView.register(RepositoryTableViewCell.self, forCellReuseIdentifier: kCellId)
+        screen.tableView.register(RepositoryTableViewCell.self, forCellReuseIdentifier: kCellId)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,5 +22,9 @@ extension TopStarListViewController: UITableViewDelegate, UITableViewDataSource 
         let cell: RepositoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: kCellId, for: indexPath) as! RepositoryTableViewCell
         
         return viewModel.getCell(cell, forIndex: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.repositoryDetail(withRepository: viewModel.getRepository(atIndex: indexPath.row))
     }
 }
